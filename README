@@ -1,0 +1,10 @@
+mkdir -p .github/workflows
+touch .github/workflows/ci.yml
+
+
+
+docker exec -it mongo-local mongosh -u root -p pass123 --authenticationDatabase admin
+show dbs
+use test
+show collections
+db.users.find().pretty()
