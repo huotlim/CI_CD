@@ -1,3 +1,21 @@
+# Node modules
 node_modules/
 
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Environment variables
 .env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build output (if any)
+dist/
+build/
+
+# Optional: Docker files (if you don't want to track)
+docker-compose.override.yml
