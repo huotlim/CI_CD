@@ -8,3 +8,7 @@ show dbs
 use test
 show collections
 db.users.find().pretty()
+
+git commit --allow-empty -m "Trigger rebuild"
+git push
+
