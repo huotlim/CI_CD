@@ -13,6 +13,6 @@ jobs:
       - run: npm install
       - run: node src/server.js
     env:
-      MONGO_URI: mongodb://root:pass123@localhost:27017/test?authSource=admin
-      PORT: 3000
+        MONGODB_URI: ${{ secrets.MONGODB_URI }}
+ 
 
