@@ -1,6 +1,7 @@
 const express = require("express");
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/auth.routes");
+const productRoutes = require("./routes/product.routes"); // <-- add this
 const auth = require("./middleware/auth");
 
 require("dotenv").config();
@@ -12,6 +13,9 @@ connectDB();
 
 // Auth routes
 app.use("/api/auth", authRoutes);
+
+// Product routes
+app.use("/api/products", productRoutes); // <-- add this
 
 // Protected admin route
 app.get("/api/admin", auth(["admin"]), (req, res) => {
